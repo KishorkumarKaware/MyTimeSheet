@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -39,9 +40,10 @@ public class TimeSheet
 		String result=null;
 		String workingHrs=null;
 		String status=null;
-		File file=new File("D:\\Time sheet format.xls");
-		FileInputStream fin = new FileInputStream(file);
-		HSSFWorkbook wb = new HSSFWorkbook(fin);
+		InputStream stream =TimeSheet.class.getResourceAsStream("/Time sheet format.xls");
+		/*File file=new File("D:\\Time sheet format.xls");
+		FileInputStream fin = new FileInputStream(file);*/
+		HSSFWorkbook wb = new HSSFWorkbook(stream);
 		HSSFRow row=null;
 		HSSFSheet ws = wb.getSheetAt(0);
 		HSSFRow rowHeader = ws.getRow(0);
@@ -164,7 +166,7 @@ public class TimeSheet
 				{
 					//WorkingHrs=Integer.toString(diff_in_out);
 					status="Full-Time"; 
-					fin.close();
+					stream.close();
 
 					System.out.println(" getLastRowNum "+ws.getLastRowNum());
 					HSSFRow row1 = ws.createRow((short)  ws.getLastRowNum()+1);
@@ -174,7 +176,11 @@ public class TimeSheet
 					row1.createCell(3).setCellValue(out);
 					row1.createCell(4).setCellValue(workingHrs);
 					row1.createCell(5).setCellValue(status);
-					File excel = new File("D:\\Time sheet format.xls");
+					
+					
+					ClassLoader classLoader = TimeSheet.class.getClassLoader();
+	                File excel =  new File(classLoader.getResource("/Time sheet format.xls").getFile());
+					//File excel = new File("D:\\Time sheet format.xls");
 					FileOutputStream fos = new FileOutputStream(excel);
 					wb.write(fos);
 					fos.close();
