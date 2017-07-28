@@ -21,7 +21,7 @@ import org.apache.poi.ss.usermodel.Row;
 public class TimeSheet
 {
 
-	public String check_valid(String user_Emp_Id,String name,String loc,String dt,String in,String out,String task) throws IOException, ParseException
+	public String check_valid(String user_Emp_Id,String loc,String dt,String in,String out,String task) throws IOException, ParseException
 	{
 		
 		Date date=new SimpleDateFormat("dd/MM/yyyy").parse(new SimpleDateFormat("dd/MM/yyyy 00:00:00").format(new Date()));

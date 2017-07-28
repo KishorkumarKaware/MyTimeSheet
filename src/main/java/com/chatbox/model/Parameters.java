@@ -4,69 +4,81 @@ package com.chatbox.model;
 
 @JsonIgnoreProperties(ignoreUnknown = true)*/
 public class Parameters {
-	private String in_time;
+	 private String in_time;
 
-    private String task;
+	    private String location;
 
-    private String out_time;
+	    private String task;
 
-    private String emp_id;
+	    private String out_time;
 
-    private String date;
+	    private String emp_id;
 
-    public String getIn_time ()
-    {
-        return in_time;
-    }
+	    private String date;
 
-    public void setIn_time (String in_time)
-    {
-        this.in_time = in_time;
-    }
+	    public String getIn_time ()
+	    {
+	        return in_time;
+	    }
 
-    public String getTask ()
-    {
-        return task;
-    }
+	    public void setIn_time (String in_time)
+	    {
+	        this.in_time = in_time;
+	    }
 
-    public void setTask (String task)
-    {
-        this.task = task;
-    }
+	    public String getLocation ()
+	    {
+	        return location;
+	    }
 
-    public String getOut_time ()
-    {
-        return out_time;
-    }
+	    public void setLocation (String location)
+	    {
+	        this.location = location;
+	    }
 
-    public void setOut_time (String out_time)
-    {
-        this.out_time = out_time;
-    }
+	    public String getTask ()
+	    {
+	        return task;
+	    }
 
-    public String getEmp_id ()
-    {
-        return emp_id;
-    }
+	    public void setTask (String task)
+	    {
+	        this.task = task;
+	    }
 
-    public void setEmp_id (String emp_id)
-    {
-        this.emp_id = emp_id;
-    }
+	    public String getOut_time ()
+	    {
+	        return out_time;
+	    }
 
-    public String getDate ()
-    {
-        return date;
-    }
+	    public void setOut_time (String out_time)
+	    {
+	        this.out_time = out_time;
+	    }
 
-    public void setDate (String date)
-    {
-        this.date = date;
-    }
+	    public String getEmp_id ()
+	    {
+	        return emp_id;
+	    }
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [in_time = "+in_time+", task = "+task+", out_time = "+out_time+", emp_id = "+emp_id+", date = "+date+"]";
-    }
+	    public void setEmp_id (String emp_id)
+	    {
+	        this.emp_id = emp_id;
+	    }
+
+	    public String getDate ()
+	    {
+	        return date;
+	    }
+
+	    public void setDate (String date)
+	    {
+	        this.date = date;
+	    }
+
+	    @Override
+	    public String toString()
+	    {
+	        return "ClassPojo [in_time = "+in_time+", location = "+location+", task = "+task+", out_time = "+out_time+", emp_id = "+emp_id+", date = "+date+"]";
+	    }
 }

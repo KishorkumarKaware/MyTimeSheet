@@ -50,18 +50,15 @@ public class RequestResponce {
 		Parameters p=rs.getParameters();
 		try{
 			params=rs.getParameters();
-			String name = params.getUsername();
-			String empid = params.getEmpid();
+			String empid = params.getEmp_id();
 			String date=params.getDate();
-			String t_in=params.getIntime();
-			String t_out=params.getOuttime();
+			String t_in=params.getIn_time();
+			String t_out=params.getOut_time();
 			String task=params.getTask();
-			
-			Location loc=params.getLocation();
-			String location=loc.getCity();
+			String location=params.getLocation();
 			
 			TimeSheet cobj=new TimeSheet();
-			str1=cobj.check_valid(empid,name,location,date,t_in,t_out,task);
+			str1=cobj.check_valid(empid,location,date,t_in,t_out,task);
 			
 		}
 		catch(Exception e)
