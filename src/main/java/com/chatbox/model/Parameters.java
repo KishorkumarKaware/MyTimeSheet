@@ -1,96 +1,72 @@
 package com.chatbox.model;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+/*import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonIgnoreProperties(ignoreUnknown = true)*/
 public class Parameters {
-	 private String empid;
+	private String in_time;
 
-	 private String username;
+    private String task;
 
-	 private Location location;
+    private String out_time;
 
-	 private String task;
+    private String emp_id;
 
-	 private String date;
+    private String date;
 
-	 private String intime;
+    public String getIn_time ()
+    {
+        return in_time;
+    }
 
-	 private String outtime;
+    public void setIn_time (String in_time)
+    {
+        this.in_time = in_time;
+    }
 
-	 public String getEmpid ()
-	 {
-	     return empid;
-	 }
+    public String getTask ()
+    {
+        return task;
+    }
 
-	 public void setEmpid (String empid)
-	 {
-	     this.empid = empid;
-	 }
+    public void setTask (String task)
+    {
+        this.task = task;
+    }
 
-	 public String getUsername ()
-	 {
-	     return username;
-	 }
+    public String getOut_time ()
+    {
+        return out_time;
+    }
 
-	 public void setUsername (String username)
-	 {
-	     this.username = username;
-	 }
+    public void setOut_time (String out_time)
+    {
+        this.out_time = out_time;
+    }
 
-	 public Location getLocation ()
-	 {
-	     return location;
-	 }
+    public String getEmp_id ()
+    {
+        return emp_id;
+    }
 
-	 public void setLocation (Location location)
-	 {
-	     this.location = location;
-	 }
+    public void setEmp_id (String emp_id)
+    {
+        this.emp_id = emp_id;
+    }
 
-	 public String getTask ()
-	 {
-	     return task;
-	 }
+    public String getDate ()
+    {
+        return date;
+    }
 
-	 public void setTask (String task)
-	 {
-	     this.task = task;
-	 }
+    public void setDate (String date)
+    {
+        this.date = date;
+    }
 
-	 public String getDate ()
-	 {
-	     return date;
-	 }
-
-	 public void setDate (String date)
-	 {
-	     this.date = date;
-	 }
-
-	 public String getIntime ()
-	 {
-	     return intime;
-	 }
-
-	 public void setIntime (String intime)
-	 {
-	     this.intime = intime;
-	 }
-
-	 public String getOuttime ()
-	 {
-	     return outtime;
-	 }
-
-	 public void setOuttime (String outtime)
-	 {
-	     this.outtime = outtime;
-	 }
-
-	 @Override
-	 public String toString()
-	 {
-	     return "ClassPojo [empid = "+empid+", username = "+username+", location = "+location+", task = "+task+", date = "+date+", intime = "+intime+", outtime = "+outtime+"]";
-	 }
+    @Override
+    public String toString()
+    {
+        return "ClassPojo [in_time = "+in_time+", task = "+task+", out_time = "+out_time+", emp_id = "+emp_id+", date = "+date+"]";
+    }
 }
