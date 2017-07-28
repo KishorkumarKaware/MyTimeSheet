@@ -21,7 +21,7 @@ import com.chatbox.model.Messages;
 import com.chatbox.model.Fulfillment;
 import com.chatbox.model.Location;
 
-@Path("recruiter")
+@Path("timesheet")
 public class RequestResponce {
 
 	@GET
