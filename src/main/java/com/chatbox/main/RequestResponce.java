@@ -11,15 +11,12 @@ import javax.ws.rs.core.Response;
 
 import org.codehaus.jackson.map.ObjectMapper;
 
-import com.chatbox.bussiness.CheckCriterea;
 import com.chatbox.bussiness.TimeSheet;
 import com.chatbox.bussiness.API_AI_Responce;
 import com.chatbox.model.API_AI_Response_Mdl;
-import com.chatbox.model.Country;
 import com.chatbox.model.Parameters;
 import com.chatbox.model.Response_Mdl;
 import com.chatbox.model.Result;
-import com.chatbox.model.State;
 import com.chatbox.model.Messages;
 import com.chatbox.model.Fulfillment;
 import com.chatbox.model.Location;
