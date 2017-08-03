@@ -184,7 +184,7 @@ public class TimeSheet
 					FileOutputStream fos = new FileOutputStream(excel);
 					wb.write(fos);
 					fos.close();
-					result="Your data is successfully saved.";
+					result="I am Pleased to confirm that Your time sheet entry is succefully commited to records.Thank you for reaching to us";
 					return result;
 				}
 				else if(l>=rowNum)
@@ -204,7 +204,7 @@ public class TimeSheet
 					wb.write(fos);
 					//wb.close();
 					fos.close();//else
-					result="Your data is successfully saved.";
+					result="I am Pleased to confirm that Your time sheet entry is succefully commited to records.Thank you for reaching to us";
 					return result;
 				}
 			}
